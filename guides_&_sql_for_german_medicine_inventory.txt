@@ -32,8 +32,3 @@ If there is no medicine with that letter, you will see this message.👇
 medicine_generic_name | quantity | qt_only_number....
 -----------------------+--------------+-----
 (0 rows)
-
-
-
-What I did, 
-Separated quantity numbers from the text & created QT Only number
