@@ -1,0 +1,39 @@
+🟢Basic guide (in side python)  
+as for the Loading Excel file (absolute path) 
+#You will have to copy the file path of your Excel file.
+#paste it in note pad or any other word application 
+#then copy that from that application than past it on the (absolute path) section.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔵SQL Section 🟢And basic guild inside PiostgrSQL
+
+View the full table⬇️
+
+SELECT * FROM sales_business.german_medicine_inventory
+
+🔵 This will work on any numeric column except dates,
+Just change the column name.⬇️
+
+SELECT * 
+FROM sales_business.german_medicine_inventory
+ORDER BY retail_price ASC;
+
+🔵 Find any medicine you think that is inside the table⬇️
+
+SELECT * 
+FROM sales_business.german_medicine_inventory
+WHERE medicine_generic_name LIKE 'f%';
+
+
+🟢Type the first letter of the name of the medicine you want to search for (beside the %). [With lowercase letters]
+If there is no medicine with that letter, you will see this message.👇
+
+medicine_generic_name | quantity | qt_only_number....
+-----------------------+--------------+-----
+(0 rows)
+
+
+
+What I did, 
+Separated quantity numbers from the text & created QT Only number
