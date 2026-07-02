@@ -39,7 +39,6 @@ def clean_row_data(value):
     
     return cleaned
 
-# কলাম অনুযায়ী ডাটা ক্লিন করা
 for col in df.columns:
     # Will clean only text columns, this won't work on numeric columns
     if col not in ['wholesale_price', 'retail_price', 'qt_only_number']:
