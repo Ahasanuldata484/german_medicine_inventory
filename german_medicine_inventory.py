@@ -33,7 +33,7 @@ def clean_row_data(value):
     
     cleaned = value.lower()
     cleaned = cleaned.replace('/', '-')
-    cleaned = re.sub(r'[^a-z0-9\s\-\.\:\*]', '', cleaned) # * রাখা হলো যদি ডাটাতে থাকে
+    cleaned = re.sub(r'[^a-z0-9\s\-\.\:\*]', '', cleaned)
     cleaned = re.sub(r'\s+', '_', cleaned)
     cleaned = cleaned.strip('_')
     
@@ -44,7 +44,7 @@ for col in df.columns:
     if col not in ['wholesale_price', 'retail_price', 'qt_only_number']:
         df[col] = df[col].map(clean_row_data)
 
-# Extra safety: If there is any text or dirty data in the price column, clean it and convert it to float
+# Extra safety: If there is any text or dirty data in the numeric columns, clean it and convert it to float
 df['wholesale_price'] = pd.to_numeric(df['wholesale_price'].astype(str).str.replace(r'[^0-9.]', '', regex=True), errors='coerce')
 df['retail_price'] = pd.to_numeric(df['retail_price'].astype(str).str.replace(r'[^0-9.]', '', regex=True), errors='coerce')
 df['qt_only_number'] = pd.to_numeric(df['qt_only_number'], errors='coerce').fillna(0).astype(int)
