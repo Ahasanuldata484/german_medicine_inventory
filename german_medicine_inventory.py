@@ -33,7 +33,7 @@ def clean_row_data(value):
     
     cleaned = value.lower()
     cleaned = cleaned.replace('/', '-')
-    cleaned = re.sub(r'[^a-z0-9\s\-\.\:\*]', '', cleaned)
+    cleaned = re.sub(r'[^a-z0-9\s\.\:]', '', cleaned)
     cleaned = re.sub(r'\s+', '_', cleaned)
     cleaned = cleaned.strip('_')
     
