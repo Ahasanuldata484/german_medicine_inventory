@@ -14,14 +14,25 @@ View the full table⬇️
 
 SELECT * FROM sales_business.german_medicine_inventory
 
-🔵 This will retrieves all records from the table and sorts them from the lowest to the highest retail_price
-Just change the column name.⬇️
+🔵 This will retrieve all records from the table and sorts them from the lowest to the highest in the "retail_price" column
+(Just change the column name according to your needs) ⬇️
 
 SELECT * 
 FROM sales_business.german_medicine_inventory
 ORDER BY retail_price ASC;
 
-🔵 Find any medicine you think that is inside the table⬇️
+🔵 This retrieve all records from the table and sorts them from the highest to the lowest in the "retail_price" column
+(Just change the column name according to your needs) ⬇️
+
+SELECT * FROM sales_business.german_medicine_inventory ORDER BY retail_price DESC;
+
+🔵 Query for Top 10 Most Expensive Medicines ⬇️
+
+SELECT * FROM sales_business.german_medicine_inventory 
+ORDER BY retail_price DESC 
+LIMIT 10;
+
+🔵 Find any medicine you think that is inside the table ⬇️
 
 SELECT * 
 FROM sales_business.german_medicine_inventory
