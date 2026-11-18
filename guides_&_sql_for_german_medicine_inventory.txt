@@ -1,8 +1,10 @@
 🟢Basic guide (in side python)  
-as for the Loading Excel file (absolute path) 
-#You will have to copy the file path of your Excel file.
-#paste it in note pad or any other word application 
-#then copy that from that application than past it on the (absolute path) section.
+As for the Loading Excel file (absolute path)❗
+Clicking on the excel file > Right click > copy as path this may not work, even though the part is correct. to be sure it works⬇️
+#1 You will have to copy the file path of your Excel file.
+#2 Paste it in note pad or any other word application 
+#3 Press Win + v (For Windows) Or Command (⌘) + 4 And clear your clipboard
+#4 Now copy the file path witch you have pasted earlier on your word application, finally paste it on the (Absolute path) section
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -12,7 +14,7 @@ View the full table⬇️
 
 SELECT * FROM sales_business.german_medicine_inventory
 
-🔵 This will work on any numeric column except dates,
+🔵 This will retrieves all records from the table and sorts them from the lowest to the highest retail_price
 Just change the column name.⬇️
 
 SELECT * 
